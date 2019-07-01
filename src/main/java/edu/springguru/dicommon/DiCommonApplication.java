@@ -15,8 +15,8 @@ public class DiCommonApplication {
     public static void main(String[] args) {
         final ApplicationContext ctx = SpringApplication.run(DiCommonApplication.class, args);
         final MyController myController = (MyController)ctx.getBean("myController");
-        myController.hello();
 
+        System.out.println(myController.hello());
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
